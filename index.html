@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+
+    <!-- Tailwind config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "hell-gelb": "#FEF7F2", // body bg
+              "karte-bg": "#DDC7BB", // card bg
+              "btn-color": "#2B1B12", // btn color
+              "text-primary": "#2B1B12", // titles H1-H6
+              "text-secondary": "#4F3527", // text p
+            },
+            spacing: {
+              "btn-l-w": "176px", // width for the large button
+              "btn-l-h": "58px", // height for the large button
+              "btn-m-w": "156px", // width for the medium button
+              "btn-m-h": "58px", // height for the medium button
+              "btn-s-w": "100px", // width for the small button
+              "btn-s-h": "48px", // height for the small button
+            },
+            borderRadius: {
+              btn: "8px",
+            },
+            fontFamily: {
+              montserrat: ["Montserrat", "sans-serif"],
+            },
+            fontSize: {
+              h1: ["74px", "90.21px"],
+              h2: ["40px", "56px"],
+              h5: ["22px", "26.82px"],
+              h6: ["20px", "24.38px"],
+              p: ["18px", "28.8px"],
+              btn: ["18px", "21.94px"],
+            },
+            fontWeight: {
+              boldest: "800",
+              bold: "700",
+              semibold: "600",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-montserrat">
+    <!-- Felicia -->
+    <header id="header">
+      <nav class="flex justify-between items-center">
+        <div class="logo">Logo</div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Agents</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="side-block">
+          <div class="search-icon"></div>
+          <div class="user-icon"></div>
+          <div class="sign-up-button"></div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="px-4">
+      <!-- Felicia -->
+      <section id="hero ">Hero Content</section>
+      <!-- Ramil -->
+      <section id="home">
+        Home Sweet home Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Amet omnis harum magnam culpa nisi doloremque molestias quia accusamus
+        cum, mollitia expedita velit voluptatum assumenda neque ipsam ad
+        molestiae nemo fuga?
+      </section>
+
+      <!-- Ramil -->
+      <section id="advantages"></section>
+
+      <!-- Ramil -->
+      <section id="popular"></section>
+
+      <!-- Felicia -->
+      <section id="reviews"></section>
+
+      <!-- Ramil -->
+      <section id="contact"></section>
+    </main>
+    <!-- Ramil -->
+    <footer id="footer"></footer>
+  </body>
+</html>
