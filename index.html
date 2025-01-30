@@ -32,6 +32,8 @@
               "btn-m-h": "58px", // height for the medium button
               "btn-s-w": "100px", // width for the small button
               "btn-s-h": "48px", // height for the small button
+              "d-lg": "1440px", // desktop large
+              "px-main": "6.5rem", // padding for the main content
             },
             borderRadius: {
               btn: "8px",
@@ -57,7 +59,7 @@
       };
     </script>
   </head>
-  <body class="font-montserrat">
+  <body class="font-montserrat w-d-lg mx-auto">
     <!-- Felicia -->
     <header id="header" class="px-16 py-8 bg-hell-gelb">
       <nav class="flex justify-between items-center">
@@ -86,31 +88,84 @@
       </nav>
     </header>
 
-    <main class="px-16 bg-hell-gelb">
-      <!-- Felicia -->
-      <section id="hero" class="flex items-center">
-        <div id="Hero-text">
-          <h1 class="text-h1 font-bold text-text-primary mb-8">
-            Find Your Dream Home
-          </h1>
-          <p class="text-p font-bold text-text-secondary mb-16">
-            Explore our curated selextion of exquisite properties meticulously
-            tailored to your unique dream home vision
-          </p>
-          <button
-            class="w-btn-l-w h-btn-l-h bg-btn-color text-white rounded-btn text-btn font-semibold"
-          >
-            Sign up
-          </button>
+    <!-- Felicia -->
+    <section id="hero" class="flex items-center bg-hell-gelb px-px-main">
+      <div id="Hero-text">
+        <h1 class="text-h1 font-bold text-text-primary mb-8">
+          Find Your Dream Home
+        </h1>
+        <p class="text-p font-bold text-text-secondary mb-16">
+          Explore our curated selextion of exquisite properties meticulously
+          tailored to your unique dream home vision
+        </p>
+        <button
+          class="w-btn-l-w h-btn-l-h bg-btn-color text-white rounded-btn text-btn font-semibold"
+        >
+          Sign up
+        </button>
+      </div>
+      <img src="./images/Hero/hero image 1.png" alt="Hero-Foto" />
+    </section>
+    <!-- Ramil -->
+    <main class="px-px-main">
+      <section
+        id="home"
+        class="max-w-6xl bg-white flex flex-col md:flex-row md:gap-[6.625rem]"
+      >
+        <div class="md:w-[595px] md:h-[416px]">
+          <img
+            src="images/Home/dedb7f25e65288193191ab95c7056c16.jpeg"
+            alt="Modern House"
+            class="rounded-xl w-full brightness-200"
+          />
         </div>
-        <img src="./images/Hero/hero image 1.png" alt="Hero-Foto" />
-      </section>
-      <!-- Ramil -->
-      <section id="home">
-        Home Sweet home Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Amet omnis harum magnam culpa nisi doloremque molestias quia accusamus
-        cum, mollitia expedita velit voluptatum assumenda neque ipsam ad
-        molestiae nemo fuga?
+
+        <!-- Text Content -->
+        <div class="md:w-1/2 flex flex-col">
+          <h2 class="text-text-primary text-4xl font-extrabold">
+            We Help You To Find <br />
+            Your Dream Home
+          </h2>
+          <p class="text-[#4F3527] text-lg font-bold mt-8">
+            From cozy cottages to luxurious estates, our dedicated team guides
+            you through every step of the journey, ensuring your dream home
+            becomes a reality.
+          </p>
+
+          <!-- Stats -->
+          <div class="flex flex-wrap gap-8 mt-12">
+            <div class="text-left">
+              <p
+                class="text-text-secondary text-[48px] leading-[58px] font-bold"
+              >
+                8K+
+              </p>
+              <p class="text-text-secondary text-lg font-semibold">
+                Houses Available
+              </p>
+            </div>
+            <div class="text-left">
+              <p
+                class="text-text-secondary text-[48px] leading-[58px] font-bold"
+              >
+                6K+
+              </p>
+              <p class="text-text-secondary text-lg font-semibold">
+                Houses Sold
+              </p>
+            </div>
+            <div class="text-left">
+              <p
+                class="text-text-secondary text-[48px] leading-[58px] font-bold"
+              >
+                2K+
+              </p>
+              <p class="text-text-secondary text-btn font-semibold">
+                Trusted Agents
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- Ramil -->
