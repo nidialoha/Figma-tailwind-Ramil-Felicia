@@ -59,26 +59,52 @@
   </head>
   <body class="font-montserrat">
     <!-- Felicia -->
-    <header id="header">
+    <header id="header" class="px-16 py-8 bg-hell-gelb">
       <nav class="flex justify-between items-center">
-        <div class="logo">Logo</div>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Service</a></li>
-          <li><a href="#">Agents</a></li>
-          <li><a href="#">Contact</a></li>
+        <div class="logo"><img src="./images/Logo/logo.png" alt="Logo" /></div>
+        <ul class="flex justify-center gap-16 font-bold text-p pt-2">
+          <li class="hover:text-karte-bg"><a href="#">Home</a></li>
+          <li class="hover:text-karte-bg"><a href="#">Service</a></li>
+          <li class="hover:text-karte-bg"><a href="#">Agents</a></li>
+          <li class="hover:text-karte-bg"><a href="#">Contact</a></li>
         </ul>
-        <div class="side-block">
-          <div class="search-icon"></div>
-          <div class="user-icon"></div>
-          <div class="sign-up-button"></div>
+        <div class="flex gap-8 items-center pt-2">
+          <div class="search-icon">
+            <img src="./icons/Header/search.png" alt="search" />
+          </div>
+          <div class="user-icon">
+            <img src="./icons/Header/user.svg" alt="" />
+          </div>
+          <div class="sign-up-button">
+            <button
+              class="w-btn-s-w h-btn-s-h bg-btn-color text-white rounded-btn text-btn"
+            >
+              Sign Up
+            </button>
+          </div>
         </div>
       </nav>
     </header>
 
-    <main class="px-4">
+    <main class="px-16 bg-hell-gelb">
       <!-- Felicia -->
-      <section id="hero ">Hero Content</section>
+      <section id="hero" class="flex items-center">
+        <div id="Hero-text">
+          <h1 class="text-h1 font-bold text-text-primary mb-8">
+            Find Your Dream Home
+          </h1>
+          <p class="text-p font-bold text-text-secondary mb-16">
+            Explore our curated selextion of exquisite properties meticulously
+            tailored to your unique dream home vision
+          </p>
+          <button
+            class="w-btn-l-w h-btn-l-h bg-btn-color text-white rounded-btn text-btn font-semibold"
+          >
+            Sign up
+          </button>
+        </div>
+        <img src="./images/Hero/hero image 1.png" alt="Hero-Foto" />
+      </section>
       <!-- Ramil -->
       <section id="home">
         Home Sweet home Lorem ipsum dolor sit amet consectetur adipisicing elit.
