@@ -36,7 +36,9 @@
               "px-main": "6.5rem", // padding for the main content
             },
             borderRadius: {
+              icon: "4px",
               btn: "8px",
+              card: "18px",
             },
             fontFamily: {
               montserrat: ["Montserrat", "sans-serif"],
@@ -48,12 +50,16 @@
               h6: ["20px", "24.38px"],
               p: ["18px", "28.8px"],
               btn: ["18px", "21.94px"],
+              sbtn: ["14px", "17.07px"],
               span: ["16px", "20.8px"],
             },
             fontWeight: {
               boldest: "800",
               bold: "700",
               semibold: "600",
+            },
+            boxShadow: {
+              card: "0px 4px 30px 0px rgba(43, 27, 18, 0.12)", // card shadow
             },
           },
         },
@@ -218,7 +224,7 @@
         </p>
         <div class="flex flex-raw justify-center gap-[45px]">
           <div
-            class="bg-karte-bg rounded-xl pt-[30px] pl-[24px] pb-[38px] max-w-[275px] max-h-[268px]"
+            class="bg-karte-bg rounded-xl pt-[30px] pl-[24px] pb-[38px] max-w-[275px] max-h-[268px] shadow-card"
           >
             <img
               src="icons/Adventages/map pin.png"
@@ -288,7 +294,175 @@
       </section>
 
       <!-- Ramil -->
-      <section id="popular"></section>
+      <section id="popular">
+        <h2 class="text-h2 font-extrabold mb-[63px] text-center">
+          Our Popular Residences
+        </h2>
+        <div class="flex justify-between gap-[60px]">
+          <!-- Card 1 -->
+          <div
+            class="card bg-karte-bg rounded-card w-[382px] h-[534px] shadow-card"
+          >
+            <img
+              src="images/Popular/eec148532687106c4c203619d2025ee2.png"
+              alt=""
+              class="rounded-tl-card rounded-tr-card h-[356px] w-full"
+            />
+            <div class="content p-4 pr-[30px]">
+              <div class="location flex flex-raw">
+                <img
+                  src="icons/Popular/34c2942cb4a301be13e6923257df858b.png"
+                  alt=""
+                  class="w-[24px] h-[24px] mr-[8px]"
+                />
+                <h6 class="location__title text-h6 font-bold mb-[26px]">
+                  San Francisco, California
+                </h6>
+              </div>
+              <div class="specs flex flex-raw mb-[26px]">
+                <div class="spec flex flex-raw mr-[38px] items-end">
+                  <img
+                    src="icons/Popular/ee4afa92fbd4b5c226dad4c16e1645b2.png"
+                    alt=""
+                    class="spec__icon bg-white rounded-icon w-[24px] h-[24px] mr-[8px]"
+                  />
+                  <span class="spec__description text-btn font-semibold"
+                    >4 Rooms</span
+                  >
+                </div>
+                <div class="spec flex flex-raw mr-[38px] items-end">
+                  <img
+                    src="icons/Popular/dedc6d914272a51b861e022185ff1541.png"
+                    alt=""
+                    class="spec__icon bg-white rounded-icon w-[24px] h-[24px] mr-[8px]"
+                  />
+                  <span class="spec__description text-btn font-semibold"
+                    >3,500 sq ft</span
+                  >
+                </div>
+              </div>
+              <div
+                class="sign-up-container flex flex-raw justify-between items-end"
+              >
+                <button
+                  class="w-btn-s-w h-btn-s-h bg-btn-color text-white rounded-btn text-sbtn font-semibold"
+                >
+                  Sign Up
+                </button>
+                <h5 class="price text-h5 font-bold">$2,500,000</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="card bg-karte-bg rounded-card w-[382px] h-[534px] shadow-card"
+          >
+            <img
+              src="images/Popular/5328700ebb8393c8d24ea26b9223f7e7.png"
+              alt=""
+              class="rounded-tl-card rounded-tr-card h-[356px] w-full"
+            />
+            <div class="content p-4 pr-[30px]">
+              <div class="location flex flex-raw">
+                <img
+                  src="icons/Popular/34c2942cb4a301be13e6923257df858b.png"
+                  alt=""
+                  class="w-[24px] h-[24px] mr-[8px]"
+                />
+                <h6 class="location__title text-h6 font-bold mb-[26px]">
+                  Beverly Hills, California
+                </h6>
+              </div>
+              <div class="specs flex flex-raw mb-[26px]">
+                <div class="spec flex flex-raw mr-[38px] items-end">
+                  <img
+                    src="icons/Popular/ee4afa92fbd4b5c226dad4c16e1645b2.png"
+                    alt=""
+                    class="spec__icon bg-white rounded-icon w-[24px] h-[24px] mr-[8px]"
+                  />
+                  <span class="spec__description text-btn font-semibold"
+                    >3 Rooms</span
+                  >
+                </div>
+                <div class="spec flex flex-raw mr-[38px] items-end">
+                  <img
+                    src="icons/Popular/dedc6d914272a51b861e022185ff1541.png"
+                    alt=""
+                    class="spec__icon bg-white rounded-icon w-[24px] h-[24px] mr-[8px]"
+                  />
+                  <span class="spec__description text-btn font-semibold"
+                    >1,500 sq ft</span
+                  >
+                </div>
+              </div>
+              <div
+                class="sign-up-container flex flex-raw justify-between items-end"
+              >
+                <button
+                  class="w-btn-s-w h-btn-s-h bg-btn-color text-white rounded-btn text-sbtn font-semibold"
+                >
+                  Sign Up
+                </button>
+                <h5 class="price text-h5 font-bold">$850,000</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="card bg-karte-bg rounded-card w-[382px] h-[534px] shadow-card"
+          >
+            <img
+              src="images/Popular/9f8bec75be0b97c8a11b5c36d8bb8cc2.png"
+              alt=""
+              class="rounded-tl-card rounded-tr-card h-[356px] w-full"
+            />
+            <div class="content p-4 pr-[30px]">
+              <div class="location flex flex-raw">
+                <img
+                  src="icons/Popular/34c2942cb4a301be13e6923257df858b.png"
+                  alt=""
+                  class="w-[24px] h-[24px] mr-[8px]"
+                />
+                <h6 class="location__title text-h6 font-bold mb-[26px]">
+                  Palo Alto, California
+                </h6>
+              </div>
+              <div class="specs flex flex-raw mb-[26px]">
+                <div class="spec flex flex-raw mr-[38px] items-end">
+                  <img
+                    src="icons/Popular/ee4afa92fbd4b5c226dad4c16e1645b2.png"
+                    alt=""
+                    class="spec__icon bg-white rounded-icon w-[24px] h-[24px] mr-[8px]"
+                  />
+                  <span class="spec__description text-btn font-semibold"
+                    >6 Rooms</span
+                  >
+                </div>
+                <div class="spec flex flex-raw mr-[38px] items-end">
+                  <img
+                    src="icons/Popular/dedc6d914272a51b861e022185ff1541.png"
+                    alt=""
+                    class="spec__icon bg-white rounded-icon w-[24px] h-[24px] mr-[8px]"
+                  />
+                  <span class="spec__description text-btn font-semibold"
+                    >4,000 sq ft</span
+                  >
+                </div>
+              </div>
+              <div
+                class="sign-up-container flex flex-raw justify-between items-end"
+              >
+                <button
+                  class="w-btn-s-w h-btn-s-h bg-btn-color text-white rounded-btn text-sbtn font-semibold"
+                >
+                  Sign Up
+                </button>
+                <h5 class="price text-h5 font-bold">$3,700,000</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Felicia -->
       <section id="reviews"></section>
