@@ -32,7 +32,7 @@
               "btn-m-h": "58px", // height for the medium button
               "btn-s-w": "100px", // width for the small button
               "btn-s-h": "48px", // height for the small button
-              "d-lg": "1235px", // desktop large
+              "d-lg": "1235px", // content width for the desktop large
               "px-main": "6.5rem", // padding for the main content
             },
             borderRadius: {
@@ -69,44 +69,79 @@
   </head>
   <body class="font-montserrat">
     <!-- Felicia -->
-    <header id="header" class="px-16 py-8 bg-hell-gelb">
-      <nav class="flex justify-between items-center mx-auto w-d-lg">
+    <header id="header" class="px-6 md:px-16 py-8 bg-hell-gelb">
+      <nav
+        class="flex justify-between items-center mx-auto max-w-[90%] md:max-w-[1200px]"
+      >
+        <!-- Logo -->
         <div class="logo">
-          <img src="./images/Logo/logo.png" alt="Logo" />
+          <img
+            src="./images/Logo/logo.png"
+            alt="Logo"
+            class="w-[120px] md:w-[150px]"
+          />
         </div>
-        <ul class="flex justify-center gap-16 font-bold text-p pt-2">
+
+        <!-- Menu (Desktop) -->
+        <ul
+          class="hidden md:flex justify-center gap-8 lg:gap-16 font-bold text-p pt-2"
+        >
           <li class="hover:text-karte-bg"><a href="#">Home</a></li>
           <li class="hover:text-karte-bg"><a href="#">Service</a></li>
           <li class="hover:text-karte-bg"><a href="#">Agents</a></li>
           <li class="hover:text-karte-bg"><a href="#">Contact</a></li>
         </ul>
-        <div class="flex gap-8 items-center pt-2">
+
+        <!-- Icons and Button -->
+        <div class="flex gap-4 md:gap-8 items-center pt-2">
           <div class="search-icon">
-            <img src="./icons/Header/search.png" alt="search" />
+            <img
+              src="./icons/Header/search.png"
+              alt="search"
+              class="w-6 md:w-8"
+            />
           </div>
           <div class="user-icon">
-            <img src="./icons/Header/user.svg" alt="" />
+            <img src="./icons/Header/user.svg" alt="user" class="w-6 md:w-8" />
           </div>
-          <div class="sign-up-button">
-            <button
-              class="w-btn-s-w h-btn-s-h bg-btn-color text-white rounded-btn text-btn"
-            >
-              Sign Up
-            </button>
-          </div>
+          <button
+            class="w-btn-s-w h-btn-s-h bg-btn-color text-white rounded-btn text-btn hidden md:block"
+          >
+            Sign Up
+          </button>
+        </div>
+
+        <!-- Burger Menu (Mobile) -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-btn-color text-3xl">☰</button>
         </div>
       </nav>
+
+      <!-- Mobile Menu (Hidden by default) -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden flex flex-col items-center gap-4 py-4"
+      >
+        <a href="#" class="text-p font-bold hover:text-karte-bg">Home</a>
+        <a href="#" class="text-p font-bold hover:text-karte-bg">Service</a>
+        <a href="#" class="text-p font-bold hover:text-karte-bg">Agents</a>
+        <a href="#" class="text-p font-bold hover:text-karte-bg">Contact</a>
+      </div>
     </header>
 
     <!-- Felicia -->
-    <section id="hero" class="bg-hell-gelb">
-      <div class="flex items-center w-d-lg mx-auto relative h-[680px]">
-        <div id="Hero-text">
-          <h1 class="text-h1 font-bold text-text-primary mb-8 w-[516px]">
+    <section id="hero" class="bg-hell-gelb py-12">
+      <div
+        class="flex flex-col md:flex-row items-center max-w-[90%] md:max-w-[1200px] mx-auto relative md:h-[750px]"
+      >
+        <div id="Hero-text" class="text-center md:text-left">
+          <h1 class="text-h1 font-bold text-text-primary mb-8 mx-auto md:mx-0">
             Find Your Dream Home
           </h1>
-          <p class="text-p font-bold text-text-secondary mb-16 w-[490px]">
-            Explore our curated selextion of exquisite properties meticulously
+          <p
+            class="text-p font-bold text-text-secondary mb-16 max-w-[490px] mx-auto md:mx-0"
+          >
+            Explore our curated selection of exquisite properties meticulously
             tailored to your unique dream home vision
           </p>
           <button
@@ -115,41 +150,52 @@
             Sign up
           </button>
         </div>
-        <img
-          src="./images/Hero/hero image 1.png"
-          alt="Hero-Foto"
-          class="absolute z-0 left-[420px] top-[-130px] h-[950px]"
-        />
+
+        <!-- Hero Image -->
+        <div class="w-full flex justify-center md:justify-end">
+          <img
+            src="./images/Hero/hero image 1.png"
+            alt="Hero-Foto"
+            class="max-w-[80%] max-w-[595px] md:max-w-full h-auto object-cover md:absolute md:z-0 md:left-[340px] md:top-[-100px]"
+          />
+        </div>
       </div>
     </section>
 
     <section
       id="Karte"
-      class="flex justify-center items-center gap-8 bg-karte-bg rounded-btn mx-auto w-[1070px] h-[160px] -translate-y-1/2"
+      class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 bg-karte-bg rounded-btn mx-auto max-w-[90%] md:max-w-[1070px] h-auto md:h-[160px] p-4 md:p-0 -translate-y-1/2"
     >
+      <!-- Location -->
       <div
         id="Location"
-        class="flex items-center justify-between w-[252px] bg-hell-gelb h-[58px] rounded-btn px-4"
+        class="flex items-center justify-between w-full md:w-[252px] bg-hell-gelb h-[58px] rounded-btn px-4"
       >
         <p class="text-p font-bold text-text-secondary">Location</p>
-        <img src="./icons/Hero/vector.png" alt="Location" />
+        <img src="./icons/Hero/vector.png" alt="Location" class="w-6 h-6" />
       </div>
+
+      <!-- Type -->
       <div
         id="Type"
-        class="flex items-center justify-between w-[252px] bg-hell-gelb h-[58px] rounded-btn px-4"
+        class="flex items-center justify-between w-full md:w-[252px] bg-hell-gelb h-[58px] rounded-btn px-4"
       >
         <p class="text-p font-bold text-text-secondary">Type</p>
-        <img src="./icons/Hero/home.png" alt="Type" />
+        <img src="./icons/Hero/home.png" alt="Type" class="w-6 h-6" />
       </div>
+
+      <!-- Price -->
       <div
         id="Price"
-        class="flex items-center justify-between w-[252px] bg-hell-gelb h-[58px] rounded-btn px-4"
+        class="flex items-center justify-between w-full md:w-[252px] bg-hell-gelb h-[58px] rounded-btn px-4"
       >
         <p class="text-p font-bold text-text-secondary">Price Range</p>
-        <img src="./icons/Hero/price.png" alt="Price" />
+        <img src="./icons/Hero/price.png" alt="Price" class="w-6 h-6" />
       </div>
+
+      <!-- Button -->
       <button
-        class="w-btn-m-w h-btn-m-h bg-btn-color text-white rounded-btn text-btn font-semibold"
+        class="w-full md:w-btn-m-w h-btn-m-h bg-btn-color text-white rounded-btn text-btn font-semibold"
       >
         Sign Up
       </button>
@@ -159,57 +205,60 @@
     <main>
       <section
         id="home"
-        class="max-w-6xl bg-white flex flex-col md:flex-row md:gap-[6.625rem] mx-auto"
+        class="w-[90%] md:w-d-lg mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-[6.625rem]"
       >
-        <div class="md:w-[595px] md:h-[416px]">
+        <!-- Image -->
+        <div class="md:w-[595px] md:h-[416px] w-full">
           <img
             src="images/Home/dedb7f25e65288193191ab95c7056c16.jpeg"
             alt="Modern House"
-            class="rounded-xl w-full brightness-200"
+            class="rounded-xl w-full brightness-200 object-cover"
           />
         </div>
 
         <!-- Text Content -->
-        <div class="md:w-1/2 flex flex-col">
-          <h2 class="text-text-primary text-4xl font-extrabold">
-            We Help You To Find <br />
+        <div class="md:w-1/2 flex flex-col text-center md:text-left">
+          <h2 class="text-text-primary text-3xl md:text-4xl font-extrabold">
+            We Help You To Find <br class="hidden md:block" />
             Your Dream Home
           </h2>
-          <p class="text-[#4F3527] text-lg font-bold mt-8">
+          <p class="text-[#4F3527] text-base md:text-lg font-bold mt-4 md:mt-8">
             From cozy cottages to luxurious estates, our dedicated team guides
             you through every step of the journey, ensuring your dream home
             becomes a reality.
           </p>
 
           <!-- Stats -->
-          <div class="flex flex-wrap gap-8 mt-12">
-            <div class="text-left">
+          <div
+            class="flex flex-wrap justify-center md:justify-start gap-4 md:gap-8 mt-6 md:mt-12"
+          >
+            <div class="text-center md:text-left">
               <p
-                class="text-text-secondary text-[48px] leading-[58px] font-bold"
+                class="text-text-secondary text-[40px] md:text-[48px] leading-[48px] md:leading-[58px] font-bold"
               >
                 8K+
               </p>
-              <p class="text-text-secondary text-lg font-semibold">
+              <p class="text-text-secondary text-base md:text-lg font-semibold">
                 Houses Available
               </p>
             </div>
-            <div class="text-left">
+            <div class="text-center md:text-left">
               <p
-                class="text-text-secondary text-[48px] leading-[58px] font-bold"
+                class="text-text-secondary text-[40px] md:text-[48px] leading-[48px] md:leading-[58px] font-bold"
               >
                 6K+
               </p>
-              <p class="text-text-secondary text-lg font-semibold">
+              <p class="text-text-secondary text-base md:text-lg font-semibold">
                 Houses Sold
               </p>
             </div>
-            <div class="text-left">
+            <div class="text-center md:text-left">
               <p
-                class="text-text-secondary text-[48px] leading-[58px] font-bold"
+                class="text-text-secondary text-[40px] md:text-[48px] leading-[48px] md:leading-[58px] font-bold"
               >
                 2K+
               </p>
-              <p class="text-text-secondary text-btn font-semibold">
+              <p class="text-text-secondary text-base md:text-lg font-semibold">
                 Trusted Agents
               </p>
             </div>
@@ -703,7 +752,7 @@
     <!-- Ramil -->
     <footer id="footer" class="bg-karte-bg pt-[80px] pb-[202px]">
       <div
-        class="footer__content flex justify-between items-flex-start w-d-lg mx-auto"
+        class="footer__content flex justify-between items-flex-start md:w-d-lg mx-auto"
       >
         <div class="footer__logo mr-[150px]">
           <img src="./images/Logo/logo.png" alt="Logo" class="mb-[32px]" />
@@ -788,5 +837,14 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      // JS for the mobile menu
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
   </body>
 </html>
