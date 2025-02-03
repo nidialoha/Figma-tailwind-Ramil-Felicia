@@ -32,11 +32,13 @@
               "btn-m-h": "58px", // height for the medium button
               "btn-s-w": "100px", // width for the small button
               "btn-s-h": "48px", // height for the small button
-              "d-lg": "1440px", // desktop large
+              "d-lg": "1235px", // desktop large
               "px-main": "6.5rem", // padding for the main content
             },
             borderRadius: {
+              icon: "4px",
               btn: "8px",
+              card: "18px",
             },
             fontFamily: {
               montserrat: ["Montserrat", "sans-serif"],
@@ -48,23 +50,30 @@
               h6: ["20px", "24.38px"],
               p: ["18px", "28.8px"],
               btn: ["18px", "21.94px"],
+              sbtn: ["14px", "17.07px"],
               span: ["16px", "20.8px"],
+              footerSpan: ["18px", "23.4px"],
             },
             fontWeight: {
               boldest: "800",
               bold: "700",
               semibold: "600",
             },
+            boxShadow: {
+              card: "0px 4px 30px 0px rgba(43, 27, 18, 0.12)", // card shadow
+            },
           },
         },
       };
     </script>
   </head>
-  <body class="font-montserrat w-d-lg mx-auto">
+  <body class="font-montserrat">
     <!-- Felicia -->
     <header id="header" class="px-16 py-8 bg-hell-gelb">
-      <nav class="flex justify-between items-center">
-        <div class="logo"><img src="./images/Logo/logo.png" alt="Logo" /></div>
+      <nav class="flex justify-between items-center mx-auto w-d-lg">
+        <div class="logo">
+          <img src="./images/Logo/logo.png" alt="Logo" />
+        </div>
         <ul class="flex justify-center gap-16 font-bold text-p pt-2">
           <li class="hover:text-karte-bg"><a href="#">Home</a></li>
           <li class="hover:text-karte-bg"><a href="#">Service</a></li>
@@ -90,22 +99,28 @@
     </header>
 
     <!-- Felicia -->
-    <section id="hero" class="flex items-center bg-hell-gelb px-px-main">
-      <div id="Hero-text">
-        <h1 class="text-h1 font-bold text-text-primary mb-8">
-          Find Your Dream Home
-        </h1>
-        <p class="text-p font-bold text-text-secondary mb-16">
-          Explore our curated selextion of exquisite properties meticulously
-          tailored to your unique dream home vision
-        </p>
-        <button
-          class="w-btn-l-w h-btn-l-h bg-btn-color text-white rounded-btn text-btn font-semibold"
-        >
-          Sign up
-        </button>
+    <section id="hero" class="bg-hell-gelb">
+      <div class="flex items-center w-d-lg mx-auto relative h-[680px]">
+        <div id="Hero-text">
+          <h1 class="text-h1 font-bold text-text-primary mb-8 w-[516px]">
+            Find Your Dream Home
+          </h1>
+          <p class="text-p font-bold text-text-secondary mb-16 w-[490px]">
+            Explore our curated selextion of exquisite properties meticulously
+            tailored to your unique dream home vision
+          </p>
+          <button
+            class="w-btn-l-w h-btn-l-h bg-btn-color text-white rounded-btn text-btn font-semibold"
+          >
+            Sign up
+          </button>
+        </div>
+        <img
+          src="./images/Hero/hero image 1.png"
+          alt="Hero-Foto"
+          class="absolute z-0 left-[420px] top-[-130px] h-[950px]"
+        />
       </div>
-      <img src="./images/Hero/hero image 1.png" alt="Hero-Foto" />
     </section>
 
     <section
@@ -141,7 +156,7 @@
     </section>
 
     <!-- Ramil -->
-    <main class="px-px-main">
+    <main class="w-d-lg mx-auto">
       <section
         id="home"
         class="max-w-6xl bg-white flex flex-col md:flex-row md:gap-[6.625rem]"
@@ -218,7 +233,7 @@
         </p>
         <div class="flex flex-raw justify-center gap-[45px]">
           <div
-            class="bg-karte-bg rounded-xl pt-[30px] pl-[24px] pb-[38px] max-w-[275px] max-h-[268px]"
+            class="bg-karte-bg rounded-xl pt-[30px] pl-[24px] pb-[38px] max-w-[275px] max-h-[268px] shadow-card"
           >
             <img
               src="icons/Adventages/map pin.png"
@@ -235,7 +250,7 @@
           </div>
 
           <div
-            class="bg-karte-bg rounded-xl pt-[30px] pl-[24px] pb-[38px] max-w-[275px] max-h-[268px]"
+            class="bg-karte-bg rounded-xl pt-[30px] pl-[24px] pb-[38px] max-w-[275px] max-h-[268px] shadow-card"
           >
             <img
               src="icons/Adventages/service.png"
@@ -252,7 +267,7 @@
           </div>
 
           <div
-            class="bg-karte-bg rounded-xl pt-[30px] pl-[24px] pb-[38px] max-w-[275px] max-h-[268px]"
+            class="bg-karte-bg rounded-xl pt-[30px] pl-[24px] pb-[38px] max-w-[275px] max-h-[268px] shadow-card"
           >
             <img
               src="icons/Adventages/document.png"
@@ -269,7 +284,7 @@
           </div>
 
           <div
-            class="bg-karte-bg rounded-xl pt-[30px] pl-[24px] pb-[38px] max-w-[275px] max-h-[268px]"
+            class="bg-karte-bg rounded-xl pt-[30px] pl-[24px] pb-[38px] max-w-[275px] max-h-[268px] shadow-card"
           >
             <img
               src="icons/Adventages/handshake.png"
@@ -288,7 +303,175 @@
       </section>
 
       <!-- Ramil -->
-      <section id="popular"></section>
+      <section id="popular">
+        <h2 class="text-h2 font-extrabold mb-[63px] text-center">
+          Our Popular Residences
+        </h2>
+        <div class="flex justify-between gap-[60px]">
+          <!-- Card 1 -->
+          <div
+            class="card bg-karte-bg rounded-card w-[382px] h-[534px] shadow-card"
+          >
+            <img
+              src="images/Popular/eec148532687106c4c203619d2025ee2.png"
+              alt=""
+              class="rounded-tl-card rounded-tr-card h-[356px] w-full"
+            />
+            <div class="content p-4 pr-[30px]">
+              <div class="location flex flex-raw">
+                <img
+                  src="icons/Popular/34c2942cb4a301be13e6923257df858b.png"
+                  alt=""
+                  class="w-[24px] h-[24px] mr-[8px]"
+                />
+                <h6 class="location__title text-h6 font-bold mb-[26px]">
+                  San Francisco, California
+                </h6>
+              </div>
+              <div class="specs flex flex-raw mb-[26px]">
+                <div class="spec flex flex-raw mr-[38px] items-end">
+                  <img
+                    src="icons/Popular/ee4afa92fbd4b5c226dad4c16e1645b2.png"
+                    alt=""
+                    class="spec__icon bg-white rounded-icon w-[24px] h-[24px] mr-[8px]"
+                  />
+                  <span class="spec__description text-btn font-semibold"
+                    >4 Rooms</span
+                  >
+                </div>
+                <div class="spec flex flex-raw mr-[38px] items-end">
+                  <img
+                    src="icons/Popular/dedc6d914272a51b861e022185ff1541.png"
+                    alt=""
+                    class="spec__icon bg-white rounded-icon w-[24px] h-[24px] mr-[8px]"
+                  />
+                  <span class="spec__description text-btn font-semibold"
+                    >3,500 sq ft</span
+                  >
+                </div>
+              </div>
+              <div
+                class="sign-up-container flex flex-raw justify-between items-end"
+              >
+                <button
+                  class="w-btn-s-w h-btn-s-h bg-btn-color text-white rounded-btn text-sbtn font-semibold"
+                >
+                  Sign Up
+                </button>
+                <h5 class="price text-h5 font-bold">$2,500,000</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="card bg-karte-bg rounded-card w-[382px] h-[534px] shadow-card"
+          >
+            <img
+              src="images/Popular/5328700ebb8393c8d24ea26b9223f7e7.png"
+              alt=""
+              class="rounded-tl-card rounded-tr-card h-[356px] w-full"
+            />
+            <div class="content p-4 pr-[30px]">
+              <div class="location flex flex-raw">
+                <img
+                  src="icons/Popular/34c2942cb4a301be13e6923257df858b.png"
+                  alt=""
+                  class="w-[24px] h-[24px] mr-[8px]"
+                />
+                <h6 class="location__title text-h6 font-bold mb-[26px]">
+                  Beverly Hills, California
+                </h6>
+              </div>
+              <div class="specs flex flex-raw mb-[26px]">
+                <div class="spec flex flex-raw mr-[38px] items-end">
+                  <img
+                    src="icons/Popular/ee4afa92fbd4b5c226dad4c16e1645b2.png"
+                    alt=""
+                    class="spec__icon bg-white rounded-icon w-[24px] h-[24px] mr-[8px]"
+                  />
+                  <span class="spec__description text-btn font-semibold"
+                    >3 Rooms</span
+                  >
+                </div>
+                <div class="spec flex flex-raw mr-[38px] items-end">
+                  <img
+                    src="icons/Popular/dedc6d914272a51b861e022185ff1541.png"
+                    alt=""
+                    class="spec__icon bg-white rounded-icon w-[24px] h-[24px] mr-[8px]"
+                  />
+                  <span class="spec__description text-btn font-semibold"
+                    >1,500 sq ft</span
+                  >
+                </div>
+              </div>
+              <div
+                class="sign-up-container flex flex-raw justify-between items-end"
+              >
+                <button
+                  class="w-btn-s-w h-btn-s-h bg-btn-color text-white rounded-btn text-sbtn font-semibold"
+                >
+                  Sign Up
+                </button>
+                <h5 class="price text-h5 font-bold">$850,000</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="card bg-karte-bg rounded-card w-[382px] h-[534px] shadow-card"
+          >
+            <img
+              src="images/Popular/9f8bec75be0b97c8a11b5c36d8bb8cc2.png"
+              alt=""
+              class="rounded-tl-card rounded-tr-card h-[356px] w-full"
+            />
+            <div class="content p-4 pr-[30px]">
+              <div class="location flex flex-raw">
+                <img
+                  src="icons/Popular/34c2942cb4a301be13e6923257df858b.png"
+                  alt=""
+                  class="w-[24px] h-[24px] mr-[8px]"
+                />
+                <h6 class="location__title text-h6 font-bold mb-[26px]">
+                  Palo Alto, California
+                </h6>
+              </div>
+              <div class="specs flex flex-raw mb-[26px]">
+                <div class="spec flex flex-raw mr-[38px] items-end">
+                  <img
+                    src="icons/Popular/ee4afa92fbd4b5c226dad4c16e1645b2.png"
+                    alt=""
+                    class="spec__icon bg-white rounded-icon w-[24px] h-[24px] mr-[8px]"
+                  />
+                  <span class="spec__description text-btn font-semibold"
+                    >6 Rooms</span
+                  >
+                </div>
+                <div class="spec flex flex-raw mr-[38px] items-end">
+                  <img
+                    src="icons/Popular/dedc6d914272a51b861e022185ff1541.png"
+                    alt=""
+                    class="spec__icon bg-white rounded-icon w-[24px] h-[24px] mr-[8px]"
+                  />
+                  <span class="spec__description text-btn font-semibold"
+                    >4,000 sq ft</span
+                  >
+                </div>
+              </div>
+              <div
+                class="sign-up-container flex flex-raw justify-between items-end"
+              >
+                <button
+                  class="w-btn-s-w h-btn-s-h bg-btn-color text-white rounded-btn text-sbtn font-semibold"
+                >
+                  Sign Up
+                </button>
+                <h5 class="price text-h5 font-bold">$3,700,000</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Felicia -->
       <section id="reviews" class="bg-hell-gelb">
@@ -454,9 +637,142 @@
       </section>
 
       <!-- Ramil -->
-      <section id="contact"></section>
+      <section id="contact" class="p-24 flex flex-col items-center">
+        <h2 class="contact__title text-h2 text-center font-extrabold mb-[34px]">
+          Do You Have Any Questions?<br />
+          Get Help From Us
+        </h2>
+
+        <div
+          class="contact_subtitle-container flex flex-raw justify-center mb-[66px]"
+        >
+          <div class="contact__subtitle flex flex-raw items-end">
+            <img
+              src="/icons/Contact-Us/b6b607f8bb3c56804c298f99ce0255f9.png"
+              class="contact__subtitle__icon w-[26px] h-[26px] mr-[2px]"
+            />
+            <h6
+              class="contact__subtitle-text text-btn font-bold mr-[64px] text-[#543E32]"
+            >
+              Chat live with our support team
+            </h6>
+          </div>
+
+          <div class="contact__subtitle flex flex-raw items-end">
+            <img
+              src="/icons/Contact-Us/b6b607f8bb3c56804c298f99ce0255f9.png"
+              class="contact__subtitle__icon w-[26px] h-[26px] mr-[2px]"
+            />
+            <h6 class="contact__subtitle-text text-h6 font-bold text-[#543E32]">
+              Browse our FAQ
+            </h6>
+          </div>
+        </div>
+
+        <form action="" class="contact__form relative">
+          <input
+            type="text"
+            placeholder="Enter your email address..."
+            class="contact__form__inpu bg-karte-bg px-[24px] py-[17px] rounded-btn w-[505px] h-[58px] pl-[55px] placeholder-[#543E32] font-semibold mr-[20px]"
+          />
+          <span
+            class="absolute left-[24px] top-1/2 -translate-y-1/2 w-6 h-6 bg-[url('icons/Contact-Us/00a824402ec6f31cc6183c5653a52a81.png')] bg-no-repeat bg-cover"
+          ></span>
+          <button
+            class="w-btn-m-w h-btn-m-h bg-btn-color text-white rounded-btn text-btn font-semibold"
+          >
+            Submit
+          </button>
+        </form>
+      </section>
     </main>
     <!-- Ramil -->
-    <footer id="footer"></footer>
+    <footer id="footer" class="bg-karte-bg pt-[80px] pb-[202px]">
+      <div
+        class="footer__content flex justify-between items-flex-start w-d-lg mx-auto"
+      >
+        <div class="footer__logo mr-[150px]">
+          <img src="./images/Logo/logo.png" alt="Logo" class="mb-[32px]" />
+          <span class="text-footerSpan font-bold">
+            Bringing you closer to <br />
+            your dream home, one <br />
+            click at a time.
+          </span>
+        </div>
+        <div class="about footer__nav flex gap-16 font-bold text-p">
+          <ul class="">
+            <li class="mb-[34px] text-h5">About</li>
+            <li class="hover:text-karte-bg mb-[32px]">
+              <a href="#">Our Story</a>
+            </li>
+            <li class="hover:text-karte-bg mb-[32px]">
+              <a href="#">Careers</a>
+            </li>
+            <li class="hover:text-karte-bg mb-[32px]">
+              <a href="#">Our Team</a>
+            </li>
+            <li class="hover:text-karte-bg"><a href="#">Resources</a></li>
+          </ul>
+        </div>
+
+        <div class="support footer__nav flex gap-16 font-bold text-p">
+          <ul class="">
+            <li class="mb-[34px] text-h5">Support</li>
+            <li class="hover:text-karte-bg mb-[32px]"><a href="#">FAQ</a></li>
+            <li class="hover:text-karte-bg mb-[32px]">
+              <a href="#">Contact Us</a>
+            </li>
+            <li class="hover:text-karte-bg mb-[32px]">
+              <a href="#">Help Center</a>
+            </li>
+            <li class="hover:text-karte-bg">
+              <a href="#">Terms of Service</a>
+            </li>
+          </ul>
+        </div>
+        <div class="find_us footer__nav flex gap-16 font-bold text-p">
+          <ul class="">
+            <li class="mb-[34px] text-h5">Find Us</li>
+            <li class="hover:text-karte-bg mb-[32px]">
+              <a href="#">Events</a>
+            </li>
+            <li class="hover:text-karte-bg mb-[32px]">
+              <a href="#">Locations</a>
+            </li>
+            <li class="hover:text-karte-bg"><a href="#">Newsletter</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__social footer__nav flex gap-16 font-bold text-p">
+          <ul class="">
+            <li class="pb-[34px] text-h5">Our Social</li>
+            <li class="hover:text-karte-bg flex pb-[32px]">
+              <img
+                src="./icons/Footer/Vector_FB.png"
+                alt="Facebook"
+                class="w-[24px] h-[24px] mr-[22px]"
+              />
+              <a href="#"> Facebook</a>
+            </li>
+            <li class="hover:text-karte-bg flex pb-[32px]">
+              <img
+                src="./icons/Footer/Vector_Insta.png"
+                alt="Instagram"
+                class="w-[24px] h-[24px] mr-[22px]"
+              />
+              <a href="#">Instagram</a>
+            </li>
+            <li class="hover:text-karte-bg flex pb-[32px]">
+              <img
+                src="./icons/Footer/Vector_Twitter.png"
+                alt="Twitter"
+                class="w-[24px] h-[24px] mr-[22px]"
+              />
+              <a href="#">Twitter (x)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
