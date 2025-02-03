@@ -32,7 +32,7 @@
               "btn-m-h": "58px", // height for the medium button
               "btn-s-w": "100px", // width for the small button
               "btn-s-h": "48px", // height for the small button
-              "d-lg": "1235px", // desktop large
+              "d-lg": "1235px", // content width for the desktop large
               "px-main": "6.5rem", // padding for the main content
             },
             borderRadius: {
@@ -65,13 +65,6 @@
           },
         },
       };
-
-      // JS для мобильного меню
-      document
-        .getElementById("menu-toggle")
-        .addEventListener("click", function () {
-          document.getElementById("mobile-menu").classList.toggle("hidden");
-        });
     </script>
   </head>
   <body class="font-montserrat">
@@ -118,7 +111,7 @@
           </button>
         </div>
 
-        <!-- Бургер-меню (Mobile) -->
+        <!-- Burger Menu (Mobile) -->
         <div class="md:hidden">
           <button id="menu-toggle" class="text-btn-color text-3xl">☰</button>
         </div>
@@ -171,7 +164,7 @@
 
     <section
       id="Karte"
-      class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 bg-karte-bg rounded-btn mx-auto max-w-[90%] md:max-w-[1070px] h-auto md:h-[160px] p-4 md:p-0 md:-translate-y-1/2"
+      class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 bg-karte-bg rounded-btn mx-auto max-w-[90%] md:max-w-[1070px] h-auto md:h-[160px] p-4 md:p-0 -translate-y-1/2"
     >
       <!-- Location -->
       <div
@@ -212,7 +205,7 @@
     <main>
       <section
         id="home"
-        class="w-[90%] md:w-full flex flex-col md:flex-row items-center gap-8 md:gap-[6.625rem]"
+        class="w-[90%] md:w-d-lg mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-[6.625rem]"
       >
         <!-- Image -->
         <div class="md:w-[595px] md:h-[416px] w-full">
@@ -844,5 +837,14 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      // JS for the mobile menu
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
   </body>
 </html>
