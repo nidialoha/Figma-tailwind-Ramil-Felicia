@@ -700,14 +700,14 @@
       </section>
 
       <!-- Ramil -->
-      <section id="contact" class="p-24 flex flex-col items-center">
+      <section id="contact" class="p-24 flex flex-col items-center mx-auto">
         <h2 class="contact__title text-h2 text-center font-extrabold mb-[34px]">
           Do You Have Any Questions?<br />
           Get Help From Us
         </h2>
 
         <div
-          class="contact_subtitle-container flex flex-raw justify-center mb-[66px]"
+          class="contact_subtitle-container flex flex-col md:flex-row justify-center mb-[66px]"
         >
           <div class="contact__subtitle flex flex-raw items-end">
             <img
@@ -732,14 +732,17 @@
           </div>
         </div>
 
-        <form action="" class="contact__form relative">
+        <form
+          action=""
+          class="contact__form relative flex flex-col items-center md:items-start md:flex-row"
+        >
           <input
             type="text"
             placeholder="Enter your email address..."
-            class="contact__form__inpu bg-karte-bg px-[24px] py-[17px] rounded-btn w-[505px] h-[58px] pl-[55px] placeholder-[#543E32] font-semibold mr-[20px]"
+            class="contact__form__input bg-karte-bg px-[24px] py-[17px] rounded-btn w-[505px] h-[58px] pl-[55px] placeholder-[#543E32] font-semibold mb-8 md:mb-0 md:mr-[20px]"
           />
           <span
-            class="absolute left-[24px] top-1/2 -translate-y-1/2 w-6 h-6 bg-[url('icons/Contact-Us/00a824402ec6f31cc6183c5653a52a81.png')] bg-no-repeat bg-cover"
+            class="absolute left-[24px] top-[20%] md:top-1/2 -translate-y-1/2 w-6 h-6 bg-[url('icons/Contact-Us/00a824402ec6f31cc6183c5653a52a81.png')] bg-no-repeat bg-cover"
           ></span>
           <button
             class="w-btn-m-w h-btn-m-h bg-btn-color text-white rounded-btn text-btn font-semibold"
